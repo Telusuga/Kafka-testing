@@ -13,7 +13,9 @@ def login_info():
     return info
 
 c=Consumer(login_info())
-c.subscribe(['my_first_topic'])
+print(c.list_topics().topics)
+t=input('Enter the require topic name that you want to subscribe to:')
+c.subscribe([t])
 
 while True:
     try:
