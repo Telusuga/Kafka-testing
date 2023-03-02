@@ -21,7 +21,7 @@ while True:
     try:
         msg=c.poll(5.0)
         if msg is None:
-            print('Waiting')
+            print('Waiting for messages')
             continue
         if msg is not None:
             print(f'The following msg is {msg.value()}')
